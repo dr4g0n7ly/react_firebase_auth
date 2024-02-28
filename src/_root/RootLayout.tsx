@@ -3,7 +3,9 @@ import { Navigate, Outlet } from "react-router-dom"
 import { Context } from "../contexts/AuthContext"
 
 const RootLayout = () => {
+  
   const {user} = useContext(Context)
+  console.log(user)
 
   return (
     <>
