@@ -1,7 +1,6 @@
 import './globals.css'
-import './styles/app.css'
 import { Routes, Route} from 'react-router-dom'
-import { Chatbot, Home } from './_root/pages'
+import { Home } from './_root/pages'
 import SigninForm from './_auth/forms/SigninForm'
 import SignupForm from './_auth/forms/SignupForm'
 import AuthLayout from './_auth/AuthLayout'
@@ -10,7 +9,7 @@ import RootLayout from './_root/RootLayout'
 const App = () => {
 
   return (
-    <main className='App'>
+    <main className='flex h-screen'>
 
       <Routes>
         {/* public routes */}
@@ -21,8 +20,7 @@ const App = () => {
 
         {/* private routes */}
         <Route element={<RootLayout />}>
-          <Route path='/' element={<Home />} />
-          <Route index path='/chatbot' element={<Chatbot />} />
+          <Route index element={<Home />} />
         </Route>
       </Routes>
     </main>

@@ -1,24 +1,21 @@
-import Spline from '@splinetool/react-spline';
+import { signOut, getAuth } from "firebase/auth"
+import { app } from "../../firebase"
 
-import '../../styles/home.css'
-import Navbar from "../../components/Navbar";
-
+const auth = getAuth(app)
 
 const Home = () => {
+  const handleSignOut = async () => {
+    try {
+      alert('signout clicked')
+      await signOut(auth)
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <div>
-      <div className='w-full border-2'></div>
-      <Navbar />
-      <div className="Home">
-        <div>
-          <Spline
-            className='spline-scene'
-            scene="https://prod.spline.design/CrhB9Bm-dPnhhRsw/scene.splinecode"
-          />
-          <h1 className='hero-text'>Secondary Healthcare meets AI+ML</h1>
-        </div>
-      </div>
-      <div className='border-2 border-black p-2 rounded'>Next div</div>
+      <h1 className="text-dark text-3xl">Home</h1>
+      <button onClick={handleSignOut} className="m-4 p-1 border-black border-2 rounded">Sign out</button>
     </div>
   )
 }
