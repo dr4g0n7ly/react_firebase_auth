@@ -9,7 +9,7 @@ import RootLayout from './_root/RootLayout'
 const App = () => {
 
   return (
-    <main className='flex h-screen'>
+    <main className='App'>
 
       <Routes>
         {/* public routes */}
@@ -20,7 +20,7 @@ const App = () => {
 
         {/* private routes */}
         <Route element={<RootLayout />}>
-          <Route index element={<Home />} />
+          <Route path='/' element={<Home />} />
         </Route>
       </Routes>
     </main>

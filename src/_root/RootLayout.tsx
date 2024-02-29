@@ -13,7 +13,7 @@ const RootLayout = () => {
       <Navigate to="/sign-in" />
     ) : (
       <>
-        <section className="flex flex-1 justify-center items-center flex-col py-10">
+        <section className="w-full">
           <Outlet />
         </section>
       </>

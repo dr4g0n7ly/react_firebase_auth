@@ -53,24 +53,24 @@ const SigninForm = () => {
   }
 
   return (
-    <section>
+    <section className="w-64">
       <div className="text-center text-lg font-semibold py-3">
         Sign in
       </div>
       <div>
-        <div className="py-3">
-          <p className="text-sm px-4">Email ID</p>
+        <div className="py-3 text-sm">
+          <p className="px-4">Email ID</p>
           <input 
-            className="border-2 border-solid border-black h-9 rounded-sm px-4" 
+            className="border-2 border-solid border-black h-9 rounded-sm px-4 w-full" 
             type="text" name="email" 
             value={form.email}
             onChange={onUpdateField}
           />
         </div>
-        <div className="py-3">
-          <p className="text-sm px-4">Password</p>
+        <div className="py-3 text-sm">
+          <p className="px-4">Password</p>
           <input 
-            className="border-2 border-solid border-black h-9 rounded-sm px-4" 
+            className="border-2 border-solid border-black h-9 rounded-sm px-4 w-full" 
             type="password" name="password" 
             value={form.password}
             onChange={onUpdateField}
